@@ -1,4 +1,4 @@
-<!DOCTYPE>
+<!doctype>
 <html lang="fr">
   	<head>
       	<meta charset="utf-8">
@@ -9,7 +9,48 @@
       	<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
   	</head>
   	<body>
+    	<style>
+      	h1 {
+        	text-align:center;
+        	background-color:rgb(170, 38, 56);
+       		font-size: xx-large;
+        	color: black;
+      	}
+      	#lien {
+        	text-decoration: none;
+        	color: black;
+        	font-size: xx-large;
+      	}
+      	nav {
+        	text-align:center;
+      	}
+      	main{
+        	margin-right: 10%;
+        	margin-left: 10%;
+      	}
+      	img{
+        	margin:auto;
+      	}
+      	footer {
+        	position: relative;
+        	margin-bottom:0px ;
+        	margin-left: 30%;
+      	}
+    	</style>
     	<div id="app">
+      		<header>
+        	<h1>À la bonne franquette</h1>
+        	<nav>
+          		<router-link id="lien" to='/'>Accueil |</router-link>
+          		<router-link id="lien" to='/ListeVins'>Liste des vins |</router-link>
+				<router-link id="lien" to='/panier'>Panier |</router-link>
+				<router-link id="lien" to='/contact'>Contact |</router-link>
+				<router-link id="lien" to='/HistoireVins'>Histoire des vins</router-link>
+        	</nav>
+      		</header>
+      		<main>
+        		<router-view :vins="vins" :panier="panier" @add-to-panier="addToPanier" @update-panier="updatePanier" @remove-from-panier="removeFromPanier"></router-view>
+      		</main>
     	</div>
     	<script src="/vue-application.js"></script>
   	</body>
