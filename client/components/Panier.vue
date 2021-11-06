@@ -10,9 +10,11 @@
 				<h4>Quantité : {{ vin.quantity }}</h4>
 				<button class="btn" @click="editVin(vin)">Modifier</button>
 				<div class="vin-title">
-					<h3>Total {{ vins.find(a => a.id === vin.id).name }} : {{ vins.find(a => a.id === vin.id).prix*vin.quantity }}€</h3>
+					<h3>Total : {{ vins.find(a => a.id === vin.id).prix*vin.quantity }}€</h3>
 				</div>
 				<p>{{ vins.find(a => a.id === vin.id).description }}</p>
+				<p>Type : {{ vins.find(a => a.id === vin.id).type }}</p>
+				<p>Année : {{ vins.find(a => a.id === vin.id).annee }}</p>
 			</div>
 			<div class="vin-content" v-else>
 				<div class="vin-title">
@@ -49,7 +51,6 @@ module.exports = {
 		editVin (vin) {
 			this.editingVin.id = vin.id
 			this.editingVin.quantity = vin.quantity
-			//this.editingVin.prix = vin.prix
     	},
 		sendEditVin () {
 			this.$emit('update-panier', this.editingVin)
