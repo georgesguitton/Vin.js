@@ -73,7 +73,7 @@ const vins = [
 	},
 	{
 		id: 9,
-		nom: "Château Latour, Premier Grand Cru Classé",
+		nom: "Château Latour, Bordeaux Premier Grand Cru Classé",
 		type: "Rouge",
 		annee: 1990,
 		description: "Nez magnifique de mentol, de camphre, de résine, de pin... Pas si explosif que ça, mais net et enthousiasmant. La bouche est souple. Sur des arômes de graphite, de sous bois... Assez intense. Une finale longue... C’est un très beau vin très enveloppant",
@@ -82,7 +82,7 @@ const vins = [
 	},
 	{
 		id: 10,
-		nom: "Château Haut-Brion, Premier Grand Cru Classé",
+		nom: "Château Haut-Brion, Bordeaux Premier Grand Cru Classé",
 		type: "Rouge",
 		annee: 1989,
 		description: "Un vin de grande classe. Robe rouge pourpre et brillante. Nez très fin, fruité (cerise) et légèrement boisé. Attaque franche en bouche. Beaucoup de souplesse et d’amplitude. Les tanins sont fondus et soyeux. De la fraîcheur et des notes fruités. En conclusion, c'est un vin très élégant.",

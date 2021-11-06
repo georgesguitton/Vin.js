@@ -1,14 +1,14 @@
 const Home = window.httpVueLoader('./components/Home.vue')
 const Panier = window.httpVueLoader('./components/Panier.vue')
-const HistoireVins = window.httpVueLoader('./components/HistoireVins.vue')
+const DetailsVins = window.httpVueLoader('./components/DetailsVins.vue')
 const ListeVins = window.httpVueLoader('./components/ListeVins.vue')
 const Contact = window.httpVueLoader('./components/Contact.vue')
 
 const routes = [
   	{ path: '/', component: Home },
   	{ path: '/panier', component: Panier },
-	{ path: '/histoireVins', component: HistoireVins },
 	{ path: '/listeVins', component: ListeVins },
+	{ path: '/detailsVins', component: DetailsVins, name:'detailsVins'},
 	{ path: '/contact', component: Contact }
 ]
 

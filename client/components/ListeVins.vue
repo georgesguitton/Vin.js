@@ -6,8 +6,11 @@
   				<div class="card-body">
     				<h5 class="card-title">{{ vin.nom }}</h5>
 					<h6>{{ vin.prix }}€</h6>
-    				<button class="btn" v-if="panier.vins.find(a => a.id === vin.id) === undefined" @click="addToPanier(vin.id)">Ajouter au panier</button>
-					<button class="btn" v-else @click="removeFromPanier(vin.id)">Retirer du panier</button>
+					<div id="infos">
+						<button class="btn" v-if="panier.vins.find(a => a.id === vin.id) === undefined" @click="addToPanier(vin.id)">Ajouter au panier</button>
+						<button class="btn" v-else @click="removeFromPanier(vin.id)">Retirer du panier</button>
+						<button class="btn" @click="goToDetails()">Plus d'infos</button>
+					</div>
   				</div>
 			</div>
 	</div>
@@ -38,7 +41,10 @@ module.exports = {
     	removeFromPanier (vinId) {
       		this.$emit('remove-from-panier', vinId)
       		this.changerShow(vinId);
-    	}
+    	},
+		goToDetails(){
+			this.$router.push({name:'detailsVins', params: {vinId}});
+		}
   	}
 }
 </script>
@@ -77,5 +83,9 @@ textarea {
 .btn {
 	background-color: #a0032a;
 	color:white;
+	margin-bottom: 5px;
+}
+#infos {
+	text-align: center;
 }
 </style>

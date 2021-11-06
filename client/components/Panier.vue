@@ -3,14 +3,14 @@
 		<h2>Votre Panier :</h2>
 		<div class="vin" v-for="vin in panier.vins" :key="vin.id">
 			<div class="vin-img">
-				<div :style="{ backgroundImage: 'url(' + vins.find(a => a.id === vin.id).image + ')' }" style="height: 1em;width:auto;">
-        		</div>
+				<img v-bind:src="vins.find(a => a.id === vin.id).image" style="height:15em;width:auto;">
 			</div>
 			<div class="vin-content" v-if="editingVin.id !== vin.id">
-				<p>{{ vin.quantity }}</p>
+				<h3>{{ vins.find(a => a.id === vin.id).nom }}</h3>
+				<h4>Quantité : {{ vin.quantity }}</h4>
 				<button class="btn" @click="editVin(vin)">Modifier</button>
 				<div class="vin-title">
-					<h2>Total {{ vins.find(a => a.id === vin.id).name }} : {{ vins.find(a => a.id === vin.id).prix*vin.quantity }}€</h2>
+					<h3>Total {{ vins.find(a => a.id === vin.id).name }} : {{ vins.find(a => a.id === vin.id).prix*vin.quantity }}€</h3>
 				</div>
 				<p>{{ vins.find(a => a.id === vin.id).description }}</p>
 			</div>
@@ -72,6 +72,8 @@ module.exports = {
 <style scoped>
 .vin {
   	display: flex;
+	margin-bottom: 20px;
+	border: solid #a0032a;
 }
 .vin-img {
   	flex: 1;
