@@ -19,7 +19,7 @@ const vins = [
 	},
 	{
 		id: 3,
-		nom: "Château de l'Ou, Infiniment Rouge 2018",
+		nom: "Château de l'Ou, Infiniment Rouge",
 		type: "Rouge",
 		annee: 2018,
 		description: "Présente surtout des arômes musqués, cuir avec des fruits fondus. Toujours belle bouche charnue et longue. Deuxième dégustation complexe avec du fruit noir et rouge, épices, cuir et sous-bois léger. Tabac blond et musqué. Vraiment une belle bouteille plaisir pour un prix très mesuré.",
@@ -28,7 +28,7 @@ const vins = [
 	},
 	{
 		id: 4,
-		nom: "Château La Fleur de Boüard, Lalande-de-Pomerol 2018",
+		nom: "Château La Fleur de Boüard Grand Cru",
 		type: "Rouge",
 		annee: 2018,
 		description: "Futur très grand vin, il a déjà tous les atouts, belle rondeur en bouche assez longue fruits des bois et chocolat noir robe rubis accentué avec des retours poivrés encore très jeune mais prometteur gagne à être gardé encore au moins 5 ans et plus et il va ravir les papilles les plus exigeantes.",
@@ -37,7 +37,7 @@ const vins = [
 	},
 	{
 		id: 5,
-		nom: "Château de l'Ou, Secret de Schistes 2018",
+		nom: "Château de l'Ou, Secret de Schistes",
 		type: "Rouge",
 		annee: 2018,
 		description: "Nez prenant sur des arômes empyreumatique et de compotée de fruits noirs (cassis, mûre). S'ouvre agréablement sur des arômes de fruits rouges, de garrigue et de poivre. Un nez qui annonce une belle Syrah. L'attaque est souple, ample et dévoile un jus puissant, soyeux et gourmand. Un bel équilibre entre la matière tannique bien travaillée et une fraîcheur modérée. On retrouve la trame olfactive en bouche ainsi que des fruits cuits. Bonne longueur, très belle découverte",
@@ -55,7 +55,7 @@ const vins = [
 	},
 	{
 		id: 7,
-		nom: "Château Trotanoy, Pomerol 1961",
+		nom: "Château Trotanoy, Pomerol Grand Cru",
 		type: "Rouge",
 		annee: 1961,
 		description: "Nez explosif de fruits noirs. Très belle matière en bouche, que de puissance et une finale très subtile. Excellente bouteille.",
@@ -64,7 +64,7 @@ const vins = [
 	},
 	{
 		id: 8,
-		nom: "Clos Rougeard, Le Bourg Saumur Champigny 2013",
+		nom: "Clos Rougeard, Le Bourg Saumur Champigny",
 		type: "Rouge",
 		annee: 2013,
 		description: "Un jus racé, profond mais sans perdre en élégance. Un végétal mûr avec de jolies notes de violette, de cassis. Un jus enrobant légèrement salin en finale. C’est précis et structuré avec des tannins superbes et des notes grillées.",
@@ -73,7 +73,7 @@ const vins = [
 	},
 	{
 		id: 9,
-		nom: "Château Latour, Grand Vin Pauillac Premier Grand Cru Classé",
+		nom: "Château Latour, Premier Grand Cru Classé",
 		type: "Rouge",
 		annee: 1990,
 		description: "Nez magnifique de mentol, de camphre, de résine, de pin... Pas si explosif que ça, mais net et enthousiasmant. La bouche est souple. Sur des arômes de graphite, de sous bois... Assez intense. Une finale longue... C’est un très beau vin très enveloppant",
@@ -82,7 +82,7 @@ const vins = [
 	},
 	{
 		id: 10,
-		nom: "Château Haut-Brion, Pessac-Léognan Premier Grand Cru Classé",
+		nom: "Château Haut-Brion, Premier Grand Cru Classé",
 		type: "Rouge",
 		annee: 1989,
 		description: "Un vin de grande classe. Robe rouge pourpre et brillante. Nez très fin, fruité (cerise) et légèrement boisé. Attaque franche en bouche. Beaucoup de souplesse et d’amplitude. Les tanins sont fondus et soyeux. De la fraîcheur et des notes fruités. En conclusion, c'est un vin très élégant.",
@@ -91,7 +91,7 @@ const vins = [
 	},
 	{
 		id: 11,
-		nom: "Domaine Coche-Dury, Corton-Charlemagne Grand Cru",
+		nom: "Domaine Coche-Dury, Corton-Charlemagne",
 		type: "Blanc",
 		annee: 2007,
 		description: "Bouteille d'anthologie qui est à la hauteur de son immense réputation avec un nez superbe et une bouche d'une rare finesse.",
@@ -118,7 +118,7 @@ const vins = [
 	},
 	{
 		id: 14,
-		nom: "Veuve Clicquot Brut",
+		nom: "Champagne Veuve Clicquot Brut",
 		type: "Pétillant",
 		annee: 2018,
 		description: "Une robe jaune claire et avec des bulles fines. Bouche minérale avec des notes citronnées-fumées et très bel équilibre.",
@@ -127,7 +127,7 @@ const vins = [
 	},
 	{
 		id: 15,
-		nom: "Château Maillet, Pomerol",
+		nom: "Château Maillet, Pomerol Grand Cru",
 		type: "Rouge",
 		annee: 2018,
 		description: "Si vous voulez un Pomerol de qualité qui a de belles années devant lui... on a là un vin droit avec une très belle structure, riche mais tout en gardant une certaine fraîcheur un peu mentholée avec de beaux tanins persistant sur la fin de bouche.",

@@ -1,0 +1,26 @@
+h1 {
+    text-align:center;
+    background-color:rgb(170, 38, 56);
+       font-size: xx-large;
+    color: black;
+}
+#lien {
+    text-decoration: none;
+    color: white;
+    font-size: xx-large;
+}
+nav {
+    text-align:center;
+}
+main{
+    margin-right: 10%;
+    margin-left: 10%;
+}
+img{
+    margin:auto;
+}
+footer {
+    position: relative;
+    margin-bottom:0px ;
+    margin-left: 30%;
+}

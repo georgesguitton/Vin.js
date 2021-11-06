@@ -23,7 +23,6 @@ router.get('/vins', (req, res) => {
 router.post('/panier', (req, res) => {
   	const vinId = parseInt(req.body.id)
   	const quantity = parseInt(req.body.quantity)
-	//const prix = parseInt(req.body.prix)
   	const vin = vins.find(a => a.id === vinId)
   	const vinIsInPanier = req.session.panier.vins.find(a => a.id === vinId)
   	if (isNaN(vinId) || isNaN(quantity) || quantity <= 0) {res.status(501).json({ message: 'Requête incorrecte' })}
@@ -33,7 +32,6 @@ router.post('/panier', (req, res) => {
     	newVin = {
       		id: vinId,
       		quantity: quantity,
-			//prix: prix
     	}
     	req.session.panier.vins.push(newVin)
   	}
@@ -44,15 +42,13 @@ router.post('/panier', (req, res) => {
 router.put('/panier/:vinId', (req, res) => {
   	const vinId = parseInt(req.params.vinId)
   	const quantity = parseInt(req.body.quantity)
-	//const prix = parseInt(req.body.prix)
   	const vinIndex = req.session.panier.vins.findIndex(a => a.id === vinId)
   	if (isNaN(vinId) || isNaN(quantity) || quantity <= 0) {res.status(400).json({ message: 'Requête incorrecte'})}
   	else if (vinIndex === -1) {res.status(501).json({message: "Le vin n'est pas dans le panier"})}
   	else {
     	req.session.panier.vins[vinIndex] = {
-      	id: vinId,
-      	quantity: quantity,
-		//prix: prix
+      		id: vinId,
+      		quantity: quantity,
    		}
   		res.json(req.session.panier)
   	}

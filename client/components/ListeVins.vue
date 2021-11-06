@@ -1,18 +1,15 @@
 <template>
 	<div>
 		<div class="vin" v-for="vin in vins" :key="vin.id">
-		<div class="vin-img">
-			<div :style="{ backgroundImage: 'url(' + vin.image + ')' }"></div>
-		</div>
-		<div class="vin-content" v-if="editingVin.id !== vin.id">
-		<div class="vin-title">
-			<h2>{{ vin.name }} - {{ vin.prix }}€</h2>
-			<div>
-				<button v-if="panier.vins.find(a => a.id === vin.id) === undefined" @click="addToPanier(vin.id)">Ajouter au panier</button>
-				<button v-else @click="removeFromPanier(vin.id)">Retirer du panier</button>
+			<div class="card" style="width: 18rem;">
+ 				<img class="card-img-top" v-bind:src="vin.image">
+  				<div class="card-body">
+    				<h5 class="card-title">{{ vin.nom }}</h5>
+					<h6>{{ vin.prix }}€</h6>
+    				<button class="btn" v-if="panier.vins.find(a => a.id === vin.id) === undefined" @click="addToPanier(vin.id)">Ajouter au panier</button>
+					<button class="btn" v-else @click="removeFromPanier(vin.id)">Retirer du panier</button>
+  				</div>
 			</div>
-		</div>
-		<p>{{ vin.description }}</p>
 	</div>
 </template>
 
@@ -26,7 +23,7 @@ module.exports = {
     	return {
 			editingVin: {
 				id: -1,
-				name: '',
+				nom: '',
 				description: '',
 				image: '',
 				prix: 0
@@ -48,7 +45,7 @@ module.exports = {
 
 <style scoped>
 .vin {
-  	display: flex;
+  	display: inline-block;
 }
 .vin-img {
   	flex: 1;
@@ -67,5 +64,18 @@ module.exports = {
 }
 textarea {
   	width: 100%;
+}
+.card-img-top{
+	height: 10em;
+	width:auto;
+}
+.card {
+	margin: 8px;
+	border-radius: 10%;
+	padding:50px;
+}
+.btn {
+	background-color: #a0032a;
+	color:white;
 }
 </style>
