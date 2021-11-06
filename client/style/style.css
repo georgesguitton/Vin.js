@@ -1,8 +1,7 @@
 h1 {
     text-align:center;
-    background-color:rgb(170, 38, 56);
-       font-size: xx-large;
-    color: black;
+    font-size: xx-large;
+    color: #a0032a;
 }
 #lien {
     text-decoration: none;
