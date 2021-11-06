@@ -1,28 +1,5 @@
 <template>
     <div>
-        <br>
-        <select class="form-select" aria-label="Default select example">
-            <option selected>Type de vins</option>
-            <option value="1">Blanc</option>
-            <option value="2">Rouge</option>
-            <option value="3">Pétillant</option>
-        </select>
-        <br>
-        <select class="form-select" aria-label="Default select example">
-            <option selected>Prix</option>
-            <option value="1">0-20 euros</option>
-            <option value="2">20-50 euros</option>
-            <option value="3">50 euros et plus</option>
-        </select>
-        <br>
-        <select class="form-select" aria-label="Default select example">
-            <option selected>Année</option>
-            <option value="1">1900-1970</option>
-            <option value="2">1970-2000</option>
-            <option value="3">2000 et après</option>
-        </select>
-        <br>
-
         <div class="vin" v-for="vin in vins" :key="vin.id">
             <div class="card" style="width: 18rem;">
                  <img class="card-img-top" v-bind:src="vin.image">
